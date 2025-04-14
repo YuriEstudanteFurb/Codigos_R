@@ -1,0 +1,90 @@
+---
+title: "Yuri Corrêa Rocha"
+format: html
+editor: visual
+---
+
+```{r}
+#| label: inflação  # NOMES UNICOS
+#| include: false  # NÃO INCLUI O RESULTADO NO DOC
+
+library(tidyverse) # PACOTE GGPLOT (GRAFICOS )
+library(wdi)  #PACOTES DOS DOS DADOS 
+
+
+
+# BASE DE DADOS 
+
+library(tidyverse)
+library(WDI)
+
+# DADOS EM PAINEL
+inflação <- WDI(country = 'all',
+                indicator = 'FP.CPI.TOTL.ZG')
+
+
+  
+# CORTE TRANSVERSAL
+inflação_tranversal <- WDI(country = 'all',
+                    indicator = 'FP.CPI.TOTL.ZG',
+                    start = 2023, end = 2023)
+# SÉRIE TEMPORAL
+inflação_temporal <- WDI(country = 'BR',
+                  indicator = 'FP.CPI.TOTL.ZG')
+
+
+```
+
+## variavel
+
+falara sobre sua variavel
+
+## GRÁFICO COM DADOS EM PAINEL
+
+Graficos Dados em Painel
+
+```{r}
+
+#| label: DADOS EM PAINEL
+#| warning: false
+#| echo: false
+
+inflação <- WDI(country = 'all',
+                indicator = 'FP.CPI.TOTL.ZG')
+
+
+```
+
+## GRÁFICO COM CORTES TRANSVERSAL
+
+FALAR SOBRE OS GRAFICOS
+
+```{r}
+#| label: CORTES TRANSVERSAL
+#| warning: false 
+#| echo: false  
+
+inflação_tranversal <- WDI(country = 'all',
+                    indicator = 'FP.CPI.TOTL.ZG',
+                    start = 2023, end = 2023)
+
+
+```
+
+## GRÁFICO COM SERIE TEMPORAL
+
+FALAR SOBRE OS GRAFICOS
+
+```{r}
+#| label: SERIE TEMPORAL
+#| warning: false 
+#| echo: false  
+
+inflação_temporal <- WDI(country = 'BR',
+                  indicator = 'FP.CPI.TOTL.ZG')
+
+
+```
+
+```{}
+```
